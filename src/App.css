@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Monocraft";
+  src: url("/fonts/Monocraft.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1e1e1e;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.app h1 {
+  line-height: 1;
+  padding: 0.5rem;
+}
+
+.editor {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.preview {
+  background: #111;
+  border: 10px solid #c5c66d;
+  padding: 12px;
+
+  width: 640px;
+  overflow: hidden;
+  font-family: "Monocraft", monospace;
+}
+
+.line {
+  display: flex;
+}
+
+.cell {
+  width: 1ch;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

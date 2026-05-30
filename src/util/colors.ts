@@ -1,0 +1,18 @@
+export const ccColors: Record<string, string> = {
+  white: "#f0f0f0",
+  orange: "#f2b233",
+  magenta: "#e57fd8",
+  lightBlue: "#99b2f2",
+  yellow: "#ded833",
+  lime: "#7fcc19",
+  pink: "#f2b2cc",
+  gray: "#4c4c4c",
+  lightGray: "#999999",
+  cyan: "#4c99b2",
+  purple: "#b266e5",
+  blue: "#3366cc",
+  brown: "#7f664c",
+  green: "#57a64e",
+  red: "#cc4c4c",
+  black: "#111111",
+};
