@@ -5,15 +5,18 @@ import Preview from "./components/Preview";
 import { exportLua } from "./util/exportLua";
 import "./App.css";
 
-const starter = `Welcome!
+const starter = `Welcome to <color text="yellow">MTML Editor</color>!
 
 <hr />
 
-<link src="home">Home</link>
+MTML Editor is a basic site to Preview:
 
-<button id="refresh">Refresh</button>
+- <color text="lime", bg="blue">Colors</color>
+- <link src="example.com">Links</link>
+- <button id="id">Buttons</button>
+- <textbox id="id">Textboxes</textbox>
 
-<textbox id="search">Search...</textbox>`;
+...and export a usable Lua File!`;
 
 export default function App() {
   const [content, setContent] =
@@ -34,59 +37,53 @@ export default function App() {
     <div className="app">
       <div className="editor">
         <div className="toolbar">
-          <button
-            onClick={() =>
-              insert(
-                '<color text="red", bg="black"></color>'
-              )
-            }
-          >
+          <button onClick={() =>
+            insert(
+              '<color text="red", bg="black"></color>'
+            )
+          }>
             Color
           </button>
 
-          <button
-            onClick={() =>
-              insert(
-                '<link src="example.com"></link>'
-              )
-            }
-          >
+          <button onClick={() =>
+            insert(
+              '<link src="example.com"></link>'
+            )
+          }>
             Link
           </button>
 
-          <button
-            onClick={() =>
-              insert(
-                '<textbox id="input"></textbox>'
-              )
-            }
-          >
+          <button onClick={() =>
+            insert(
+              '<textbox id="input"></textbox>'
+            )
+          }>
             Textbox
           </button>
 
-          <button
-            onClick={() =>
-              insert(
-                '<button id="btn"></button>'
-              )
-            }
-          >
+          <button onClick={() =>
+            insert(
+              '<button id="btn"></button>'
+            )
+          }>
             Button
           </button>
 
-          <button
-            onClick={() =>
-              insert("<hr />")
-            }
-          >
+          <button onClick={() =>
+            insert("<hr />")
+          }>
             HR
           </button>
 
-          <button
-            onClick={() =>
-              exportLua(content)
-            }
-          >
+          <button onClick={() =>
+            insert("<! comment >")
+          }>
+            Comment
+          </button>
+
+          <button onClick={() =>
+            exportLua(content + "\n\n<! Generated with MTML Editor >\n<! https://mtml-editor.andre601.ch >")
+          }>
             Export Lua
           </button>
         </div>
